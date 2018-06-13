@@ -2,33 +2,39 @@ const container = document.querySelector('#container');
 const row = document.createElement('div');
 const cell = document.createElement('div');
 
+let gridSize = 16;
 
-/* Creates grid. */
-for (a=0; a<16; a++) {
-	const row = document.createElement('div');
-	row.setAttribute('style', 'height : 25px; width : 400px; box-sizing : border-box;');
-	container.appendChild(row);
 
-		for (i=0; i<16; i++) {
-			const cell = document.createElement('div');
-			cell.setAttribute("style", 
-			'display : inline-block; border : .25px solid black; height : 25px; width : 25px; box-sizing : border-box; ');
-			cell.addEventListener("mouseover", () => { cell.style.backgroundColor = "pink"; });
-			cell.classList.add('cell');	
-			row.appendChild(cell); }
+let resizeButton = document.querySelector('#resize');
+
+resizeButton.onclick = () => { 
+	container.innerHTML = "";
+	gridSize = prompt("Select a new size for grid. (Size X Size)");
+	createGrid();
+
 }
 
-function darkenCell() {
-	let currentDarkness = this.style.opacity;
-	let newDarkness = Number(currentDarkness) + 0.1;
-	this.style.currentDarkness = newDarkness;
+createGrid();
+
+function createGrid() {
+	for (a=0; a<gridSize; a++) {
+		const row = document.createElement('div');
+		row.setAttribute('style', 'height :' + 400/gridSize + 'px; width : 400px;');
+		row.classList.add('row');
+		container.appendChild(row);
+
+			for (i=0; i<gridSize; i++) {
+				const cell = document.createElement('div');
+				cell.setAttribute("style", 
+				'display : inline-block; height :' + 400/gridSize + 'px; width :' + 400/gridSize + 'px; ');
+				cell.addEventListener("mouseover", () => { cell.style.backgroundColor = "pink"; });
+				cell.classList.add('cell');	
+				row.appendChild(cell); }
+	}
 }
 
-/*
-
-			cell.style.backgroundColor = "red";
-*/
 
 
 
+/** Maybe restructure createGrid code to style the cells/rows different outside the createGrid code? */
 
