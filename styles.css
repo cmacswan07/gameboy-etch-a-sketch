@@ -5,10 +5,10 @@ body {
 #container {
 	margin-left : auto;
 	margin-right : auto;
-	margin-top : 50px;
-	width : 400px;
-	height : 400px;
-	border : .25px solid black; 
+	margin-top : 25px;
+	width : 300px;
+	height : 300px;
+	border : .1px solid #3a3a3a; 
 	background-color : #bdd698;
 	box-shadow : inset 0px 5px 40px 10px #444444;
 
@@ -28,11 +28,20 @@ button {
 	left : 0;
 	right : 0;
 	margin : auto;
-	width : 500px;
-	height : 500px;
+	width : 400px;
+	height : 350px;
 	background-color : #606060;
 	z-index : -1;
-	border : .25px solid black;
+	border : .5px solid black;
 	border-top-left-radius: 25px;
 	border-bottom-right-radius : 25px;
+	box-shadow : 0px 2px 5px 0px #444444;
+}
+
+.light {
+	z-index : 5;
+	border-radius: 5px;
+	width : 10px;
+	height : 10px;
+	box-shadow : 10px 10px 10px 10px ##f90202;
 }
