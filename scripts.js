@@ -2,7 +2,7 @@ const container = document.querySelector('#container');
 const row = document.createElement('div');
 const cell = document.createElement('div');
 
-let gridSize = 16;
+let gridSize = 50;
 
 
 let resizeButton = document.querySelector('#resize');
@@ -26,15 +26,11 @@ function createGrid() {
 			for (i=0; i<gridSize; i++) {
 				const cell = document.createElement('div');
 				cell.setAttribute("style", 
-				'display : inline-block; height :' + 400/gridSize + 'px; width :' + 400/gridSize + 'px; ');
+				'display : table-cell; height :' + 400/gridSize + 'px; width :' + 400/gridSize + 'px; ');
 				cell.addEventListener("mouseover", () => { cell.style.backgroundColor = "pink"; });
 				cell.classList.add('cell');	
 				row.appendChild(cell); }
 	}
 }
 
-
-
-
-/** Maybe restructure createGrid code to style the cells/rows different outside the createGrid code? */
 
