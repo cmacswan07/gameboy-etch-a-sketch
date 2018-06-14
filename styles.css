@@ -1,9 +1,17 @@
+body {
+	background-color : #aa26c9;
+}
+
 #container {
-	margin : auto;
+	margin-left : auto;
+	margin-right : auto;
+	margin-top : 50px;
 	width : 400px;
 	height : 400px;
 	border : .25px solid black; 
-	box-sizing : border-box;
+	background-color : #bdd698;
+	box-shadow : inset 0px 5px 40px 10px #444444;
+
 }
 
 .gridBoxHover {
@@ -13,4 +21,18 @@
 button { 
 	display : block;
 	margin : auto;
+}
+
+.screen-border {
+	position : absolute;
+	left : 0;
+	right : 0;
+	margin : auto;
+	width : 500px;
+	height : 500px;
+	background-color : #606060;
+	z-index : -1;
+	border : .25px solid black;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius : 25px;
 }

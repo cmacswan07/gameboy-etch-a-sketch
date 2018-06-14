@@ -1,9 +1,9 @@
 const container = document.querySelector('#container');
 const row = document.createElement('div');
 const cell = document.createElement('div');
-
 let gridSize = 50;
 
+createGrid();
 
 let resizeButton = document.querySelector('#resize');
 
@@ -14,7 +14,7 @@ resizeButton.onclick = () => {
 
 }
 
-createGrid();
+
 
 function createGrid() {
 	for (a=0; a<gridSize; a++) {
@@ -26,11 +26,24 @@ function createGrid() {
 			for (i=0; i<gridSize; i++) {
 				const cell = document.createElement('div');
 				cell.setAttribute("style", 
-				'display : table-cell; height :' + 400/gridSize + 'px; width :' + 400/gridSize + 'px; ');
-				cell.addEventListener("mouseover", () => { cell.style.backgroundColor = "pink"; });
+				'display : table-cell; height :' + 400/gridSize + 'px; width :' + 400/gridSize + 'px; opacity : 0; background-color : #000');
+				cell.addEventListener("mouseover", darkenCell);
 				cell.classList.add('cell');	
 				row.appendChild(cell); }
 	}
+}
+
+/* Increases opacity of cells. */
+function darkenCell () {
+
+	let cellOpacity = +this.style.opacity;
+
+	if (cellOpacity < 1) {
+		cellOpacity += 0.1;
+	}
+
+	this.style.opacity = cellOpacity;
+
 }
 
 
