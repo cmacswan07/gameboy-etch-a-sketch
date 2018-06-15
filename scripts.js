@@ -1,7 +1,7 @@
 const container = document.querySelector('#container');
 const row = document.createElement('div');
 const cell = document.createElement('div');
-let gridSize = 50;
+let gridSize = 20;
 
 createGrid();
 

@@ -1,6 +1,26 @@
 body {
-	background-color : #aa26c9;
+	font-family : arial;
+	background-color : #a5ff89;
 }
+
+.myname {
+    color: #633670;
+    position: absolute;
+    font-weight: bolder;
+    font-size: 10pt;
+    margin-top: 415px;
+    margin-left: 50px;
+}
+
+.logo {
+	color: #633670;
+    position: absolute;
+    font-weight: bolder;
+    font-size: 10pt;
+    margin-top: 415px;
+    margin-left: 50px;
+}
+
 
 #container {
 	margin-left : auto;
@@ -11,6 +31,7 @@ body {
 	border : .1px solid #3a3a3a; 
 	background-color : #bdd698;
 	box-shadow : inset 0px 5px 40px 10px #444444;
+	z-index : 10;
 
 }
 
@@ -27,11 +48,13 @@ button {
 	position : absolute;
 	left : 0;
 	right : 0;
-	margin : auto;
+	margin-left : auto;
+	margin-right : auto;
+	margin-top : 50px;
 	width : 400px;
 	height : 350px;
 	background-color : #606060;
-	z-index : -1;
+	z-index : 0;
 	border : .5px solid black;
 	border-top-left-radius: 25px;
 	border-bottom-right-radius : 25px;
@@ -39,9 +62,94 @@ button {
 }
 
 .light {
-	z-index : 5;
-	border-radius: 5px;
-	width : 10px;
-	height : 10px;
-	box-shadow : 10px 10px 10px 10px ##f90202;
+	margin-top : 125px;
+	margin-left : 15px;
+	float : left;
+	border: 5px solid #ff0000;
+    background-color: #ff0000;
+    z-index: 5;
+    border-radius: 10px;
+    width: 5px;
+    height: 5px;
+    box-shadow: 0px 0px 3px 3px #ff3838;
+}
+
+.gbunit {
+	margin : auto;
+	width : 500px;
+	height : 700px;
+	background-color : #d6d6d6;
+	z-index : -2;
+	border-top-left-radius : 20px;
+	border-top-right-radius : 20px;
+	border-bottom-right-radius : 100px;
+	border-bottom-left-radius:20px;
+	box-shadow : 10px 10px 200px 0px #000;
+	/* box-shadow: inset 5px 25px 65px 2px #ffffff; */
+	border-width : 5px;
+	border-style : outset;
+}
+
+.dpadvert {
+    height: 100px;
+    width: 40px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 450px;
+    background-color: #000;
+    border-radius: 10px;
+    border-width: 2px;
+    box-shadow : 1px 1px 1px 1px #000;
+
+}
+
+.dpadhorz {
+    height: 40px;
+    width: 100px;
+    margin-left: 70px;
+    margin-top: 480px;
+    background-color: #000;
+    border-radius: 10px;
+    border-width: 2px;
+    box-shadow : 1px 1px 1px 1px #000;
+    z-index : 2px;
+}
+
+.dpadinset {
+    height: 30px;
+    width: 30px;
+    margin-left: 7px;
+    margin-top: 32px;
+    background-color: #111111;
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: inset -5px -4px 10px 0px #444444;
+    z-index: 3;
+}
+
+.gbbuttona {
+	height: 65px;
+    margin-top: -40px;
+    margin-right: 125px;
+    float: right;
+    border-radius: 50px;
+    width: 65px;
+    background-color: #7c0f84;
+    box-shadow: inset 5px 25px 65px 2px #cea5d1;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #c654ce;
+}
+
+.gbbuttonb {
+    height: 65px;
+    margin-top: -65px;
+    margin-left: 385px;
+    border-radius: 50px;
+    width: 65px;
+    background-color: #7c0f84;
+    box-shadow: inset 5px 25px 65px 2px #cea5d1;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #c654ce;
 }
