@@ -1,6 +1,6 @@
 body {
 	font-family : arial;
-	background-color : #a5ff89;
+	background-color : #397bba;
 }
 
 .myname {
@@ -163,6 +163,16 @@ button {
     border-color: #c654ce;
 }
 
+.resizegridtext {
+	color: #633670;
+    position: absolute;
+    font-weight: bolder;
+    font-size: 15pt;
+    margin-top: 100px;
+    margin-left: 180px;
+    transform: rotate(-18deg);
+}
+
 .gbbuttonb {
     height: 65px;
     margin-top: -65px;
@@ -174,4 +184,62 @@ button {
     border-style: outset;
     border-width: 2px;
     border-color: #c654ce;
+}
+
+.speakers1 {
+	background-color: #3a3a3a;
+    width: 8px;
+    height: 65px;
+    position: absolute;
+    border-radius: 5px;
+    transform: rotate(-18deg);
+    margin-left: 350px;
+    margin-top: 80px;
+}
+
+.speakers2 {
+    background-color: #3a3a3a;
+    width: 8px;
+    height: 65px;
+    position: absolute;
+    border-radius: 5px;
+    transform: rotate(-18deg);
+    margin-left: 380px;
+    margin-top: 70px;
+}
+
+.speakers3 {
+    background-color: #3a3a3a;
+    width: 8px;
+    height: 65px;
+    position: absolute;
+    border-radius: 5px;
+    transform: rotate(-18deg);
+    margin-left: 410px;
+    margin-top: 60px;
+}
+
+.speakers4 {
+    background-color: #3a3a3a;
+    width: 8px;
+    height: 65px;
+    position: absolute;
+    border-radius: 5px;
+    transform: rotate(-18deg);
+    margin-left: 440px;
+    margin-top: 50px;
+}
+
+button { 
+	background-color: #3a3a3a;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 180px;
+    transform: rotate(-18deg);
+    margin-top: 70px;
+    width: 100px;
+    height: 20px;
+    box-shadow: 0px 2px 0px 0px #000;
+    border: 0;
+    color: #3a3a3a;
 }
