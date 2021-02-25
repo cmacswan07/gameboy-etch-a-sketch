@@ -10,16 +10,24 @@ let gridSize = 20;
 function createGrid() {
   for (var i = 0; i < gridSize; i++) {
     const row = document.createElement('div');
-    row.setAttribute('style', 'height :' + 300 / gridSize + 'px; width : 300px;');
+    row.setAttribute("style", `
+      height : ${300 / gridSize}px; 
+      width : 300px;
+    `);
     row.classList.add('row');
     container.appendChild(row);
 
     for (var j = 0; j < gridSize; j++) {
       const cell = document.createElement('div');
-      cell.setAttribute("style", 
-      'display : table-cell; height :' + 300/gridSize + 'px; width :' + 300/gridSize + 'px; opacity : 0; background-color : #000');
+      cell.setAttribute("style", `
+        display : table-cell; 
+        height : ${300/gridSize}px; 
+        width : ${300/gridSize}px; 
+        opacity : 0; 
+        background-color : #000
+      `);
       cell.addEventListener("mouseover", darkenCell);
-      cell.classList.add('cell');	
+      cell.classList.add('cell');
       row.appendChild(cell); 
     }
   }
