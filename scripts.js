@@ -10,15 +10,18 @@ let gridSize = 20;
 function createGrid() {
   for (var i = 0; i < gridSize; i++) {
     const row = document.createElement('div');
+
     row.setAttribute("style", `
       height : ${300/gridSize}px; 
       width : 300px;
     `);
+
     row.classList.add('row');
     container.appendChild(row);
 
     for (var j = 0; j < gridSize; j++) {
       const cell = document.createElement('div');
+
       cell.setAttribute("style", `
         display : table-cell; 
         height : ${300/gridSize}px; 
@@ -26,6 +29,7 @@ function createGrid() {
         opacity : 0; 
         background-color : #000
       `);
+
       cell.addEventListener("mouseover", darkenCell);
       cell.classList.add('cell');
       row.appendChild(cell); 
@@ -46,7 +50,13 @@ function darkenCell () {
 
 resizeButton.onclick = () => { 
   container.innerHTML = "";
-  gridSize = prompt("Select a new size for grid. (Size X Size)");
+  gridSize = Number(prompt("Select a new size for grid, pick a number between 0 and 100. (Size X Size)"));
+
+  while (isNaN(gridSize) || gridSize <= 0 || gridSize >= 100) {
+    console.log(gridSize);
+    gridSize = prompt("Please enter a valid number between 0 and 100.");
+  }
+
   createGrid();
 }
 
