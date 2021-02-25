@@ -11,7 +11,7 @@ function createGrid() {
   for (var i = 0; i < gridSize; i++) {
     const row = document.createElement('div');
     row.setAttribute("style", `
-      height : ${300 / gridSize}px; 
+      height : ${300/gridSize}px; 
       width : 300px;
     `);
     row.classList.add('row');
