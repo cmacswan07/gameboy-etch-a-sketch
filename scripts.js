@@ -8,7 +8,7 @@ let gridSize = 20;
 
 /* creates grid */
 function createGrid() {
-  for (var i = 0; i < gridSize; i++) {
+  for (let i = 0; i < gridSize; i++) {
     const row = document.createElement('div');
 
     row.setAttribute("style", `
@@ -19,7 +19,7 @@ function createGrid() {
     row.classList.add('row');
     container.appendChild(row);
 
-    for (var j = 0; j < gridSize; j++) {
+    for (let j = 0; j < gridSize; j++) {
       const cell = document.createElement('div');
 
       cell.setAttribute("style", `
